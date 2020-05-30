@@ -1,9 +1,25 @@
-const cardButtons = document.querySelectorAll('.button');
+const cardButtons = document.querySelector('.button');
+const streamer = document.querySelector('#sname');
+const link = document.querySelector('#link');
+const streamers = document.querySelector('.streamers');
 
 function handleCardButtonClick(event) {
-    console.log('click!');
+    console.log(streamer.value);
+    console.log(link.value);
+    streamers.innerHTML = `
+    <div class="streamer">
+    <p>${streamer.value}</p>
+    <a href="https://twitch.tv/${link.value}" target="_blank">Twitch</a>
+</div>
+    `;
 }
 
-cardButtons.forEach(button =>
-    button.addEventListener('click', handleCardButtonClick)
-    );
+cardButtons.addEventListener('click', handleCardButtonClick);
+
+
+
+
+// create a div with class of streamer
+// create a p tag with the name (streamer.value) in the middle
+// create an a tag with the href of link.value
+// append them to the page
