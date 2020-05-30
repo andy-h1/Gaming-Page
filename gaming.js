@@ -6,12 +6,14 @@ const streamers = document.querySelector('.streamers');
 function handleCardButtonClick(event) {
     console.log(streamer.value);
     console.log(link.value);
-    streamers.innerHTML = `
+    const newStreamDetails = `
     <div class="streamer">
     <p>${streamer.value}</p>
     <a href="https://twitch.tv/${link.value}" target="_blank">Twitch</a>
 </div>
     `;
+
+    streamers.insertAdjacentHTML("beforeend", newStreamDetails);
 }
 
 cardButtons.addEventListener('click', handleCardButtonClick);
