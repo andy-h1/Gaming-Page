@@ -13,10 +13,34 @@
     <h1>Gaming Galore</h1>
     <p>Bringing all your gaming content on one page - GG!</p>
 
-    <h2>Streamers</h2>
-    <p>Here you will find their Twitch, YouTube and Twitter Accounts</p>
+    <div class="streamers">
 
+        <h2>Streamers</h2>
+        <p>Here you will find their Twitch, YouTube and Twitter Accounts</p>
 
+        <div class="streamer">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/ed0f84d6-2d2d-4c4e-a5fe-7a3cc365684a-profile_image-300x300.jpg"
+                alt="Castro">
+            <p>Castro_1021</p>
+            <a href="https://www.twitch.tv/castro_1021">Twitch</a>
+
+        </div>
+
+        <div class="streamer">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/200cea12142f2384-profile_image-300x300.png"
+                alt="summit1g">
+            <p>Summit1g</p>
+            <a href="https://www.twitch.tv/summit1g">Twitch</a>
+        </div>
+
+    </div>
+
+    <form>
+        <label for="sname">Streamer:</label><br>
+        <input type="text" id="sname" name="sname" value="Streamer's name"><br>
+        <label for="link">Link:</label><br>
+        <input type="text" id="link" name="link" value="Twitch url"><br>
+    </form>
 
     <button type="button" class="button">Add</button>
     <button type="button" class="button">Remove</button>

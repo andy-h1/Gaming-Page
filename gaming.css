@@ -1,3 +1,19 @@
-.button {
+body {
+    display: block;
+    margin: 8px;
+    background-color: #884dff;
+}
+
+h1, p, .streamers, form {
+    text-align: center;
+    color: white;
+}
+
+.streamers {
     
+}
+
+.button {
+    display: flex;
+
 }
