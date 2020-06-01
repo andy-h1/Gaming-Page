@@ -2,11 +2,28 @@ body {
     display: block;
     margin: 8px;
     background-color: #884dff;
+    background-image: linear-gradient(#884dff, #661aff);
 }
 
-h1, p, .streamers, form {
+h1,
+p,
+.streamers,
+form {
     text-align: center;
     color: white;
+}
+
+h1,
+h2 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 2px 2px black;
+}
+
+.streamer,
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 10px;
 }
 
 img {
@@ -14,8 +31,11 @@ img {
     height: 100px;
     width: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
-.button {
-    display: flex;
+#sname,
+#link,
+#addLink {
+    padding: 5px 5px;
+    margin: 5px;
 }
