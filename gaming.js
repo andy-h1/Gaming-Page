@@ -1,21 +1,20 @@
 const addLink = document.querySelector('#addLink');
 const streamerInput = document.querySelector('#sname');
-const linkInput = document.querySelector('#link');
+// const linkInput = document.querySelector('#link');
 const streamers = document.querySelector('.streamers');
 
 
 function handleCardButtonClick(event) {
     console.log(streamerInput.value);
-    console.log(linkInput.value);
     const validStreamerInput = streamerInput.value;
-    const validLinkInput = linkInput.value;
+    // const validLinkInput = linkInput.value;
     const newStreamDetails = `
     <div class="streamer">
     <p>${validStreamerInput}</p>
-    <a href="https://twitch.tv/${validLinkInput}" target="_blank">Twitch</a>
+    <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
 </div>
     `;
-    if (validStreamerInput === "" || validLinkInput === "") {
+    if (validStreamerInput === "") {
         return false;
     }
     streamers.insertAdjacentHTML("beforeend", newStreamDetails);
