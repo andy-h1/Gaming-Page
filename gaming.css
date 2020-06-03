@@ -1,16 +1,13 @@
+* {
+    text-align: center;
+    color: white;
+}
+
 body {
     display: block;
     margin: 8px;
     background-color: #884dff;
     background-image: linear-gradient(#884dff, #661aff);
-}
-
-h1,
-p,
-.streamers,
-form {
-    text-align: center;
-    color: white;
 }
 
 h1,
@@ -26,17 +23,24 @@ p {
     margin: 10px;
 }
 
-img {
+.streamerImg {
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #sname,
 #link,
 #addLink {
+    color: black;
     padding: 5px 5px;
     margin: 5px;
 }
 
+.streamer {
+    display: grid;
+    justify-items: center;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
