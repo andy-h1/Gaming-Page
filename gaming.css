@@ -44,3 +44,7 @@ p {
     grid-row-start: 1;
     grid-row-end: 4;
 }
+
+.twitchButton {
+    box-shadow: 5px 5px black;
+}
