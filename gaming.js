@@ -2,7 +2,28 @@ const addLink = document.querySelector('#addLink');
 const streamerInput = document.querySelector('#sname');
 // const linkInput = document.querySelector('#link');
 const streamers = document.querySelector('.streamers');
+const endPoint = 'https://api.github.com/users/andy-h1';
+const author = document.querySelector('.author');
 
+const authorPromise = fetch(endPoint);
+authorPromise.then(response => {
+    return response.json();
+}).then(data => {
+    console.log(data);
+    console.log(data.name);
+    console.log(data.html_url);
+    console.log(data.company);
+    author.innerHTML = `
+    <p>Created by ${data.name}</p><br>
+    <a href="${data.html_url}" target="_blank">Github</a>
+    `;
+}).catch(handleError)
+
+
+function handleError(err) {
+    console.log("ERROR!");
+    console.log(err);
+  }
 
 function handleCardButtonClick(event) {
     console.log(streamerInput.value);
