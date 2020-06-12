@@ -26,20 +26,27 @@ function handleError(err) {
   }
 
 function handleCardButtonClick(event) {
+    event.preventDefault();
+
     console.log(streamerInput.value);
     const validStreamerInput = streamerInput.value;
-    // const validLinkInput = linkInput.value;
-    const newStreamDetails = `
-    <div class="streamer">
-    <p>${validStreamerInput}</p>
-    <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
-</div>
-    `;
-    if (validStreamerInput === "") {
-        return false;
+
+    if (validStreamerInput) {
+        const newStreamDetails = `
+        <div class="streamer">
+        <p>${validStreamerInput}</p>
+        <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
+    </div>
+        `;
+
+        streamers.insertAdjacentHTML("beforeend", newStreamDetails);    
     }
-    streamers.insertAdjacentHTML("beforeend", newStreamDetails);
-    event.preventDefault();
+
+    // const validLinkInput = linkInput.value;
+
+    // if (validStreamerInput === "") {
+    //     return false;
+    // }
 }
 
 addLink.addEventListener('click', handleCardButtonClick);
