@@ -9,10 +9,7 @@ const authorPromise = fetch(endPoint);
 authorPromise.then(response => {
     return response.json();
 }).then(data => {
-    console.log(data);
-    console.log(data.name);
     console.log(data.html_url);
-    console.log(data.company);
     author.innerHTML = `
     <p>Created by ${data.name}</p><br>
     <a href="${data.html_url}" target="_blank">Github</a>
@@ -23,6 +20,7 @@ authorPromise.then(response => {
 function handleError(err) {
     console.log("ERROR!");
     console.log(err);
+    userEl.textContent =`Something went wrong: ${err}`
   }
 
 function handleCardButtonClick(event) {
@@ -38,7 +36,6 @@ function handleCardButtonClick(event) {
         <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
     </div>
         `;
-
         streamers.insertAdjacentHTML("beforeend", newStreamDetails);    
     }
 
