@@ -32,7 +32,7 @@ function handleCardButtonClick(event) {
     if (validStreamerInput) {
         const newStreamDetails = `
         <div class="streamer">
-        <p>${validStreamerInput}</p>
+        <p class="streamerName">${validStreamerInput}</p>
         <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
     </div>
         `;

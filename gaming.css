@@ -1,6 +1,8 @@
 * {
     text-align: center;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
 }
 
 body {
@@ -14,13 +16,6 @@ h1,
 h2 {
     font-family: "Arial Black", Gadget, sans-serif;
     text-shadow: 2px 2px black;
-}
-
-.streamer,
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-    margin: 10px;
 }
 
 .streamerImg {
@@ -40,7 +35,18 @@ p {
 
 .streamer {
     display: grid;
-    justify-items: center;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    padding: 50px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: 1fr 50px;
+    justify-content: center;
 }
+
+.streamerName {
+    grid-row-start: 2;
+    grid-column: 1 / 2;
+}
+
+/* Add CSS Variables
+Sort out Specificity
+Add CSS Grid to streamer container */
