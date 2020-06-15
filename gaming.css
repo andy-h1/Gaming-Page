@@ -18,19 +18,11 @@ h2 {
     text-shadow: 2px 2px black;
 }
 
-.streamerImg {
+.streamer-img {
     border-radius: 50%;
     height: 300px;
     width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#sname,
-#link,
-#addLink {
-    color: black;
-    padding: 5px 5px;
-    margin: 5px;
 }
 
 .streamer {
@@ -42,9 +34,19 @@ h2 {
     justify-content: center;
 }
 
-.streamerName {
+.streamer-name {
     grid-row-start: 2;
     grid-column: 1 / 2;
+}
+
+.streamer-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-link {
+    color: black;
 }
 
 /* Add CSS Variables
