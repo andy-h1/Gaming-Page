@@ -1,9 +1,11 @@
-const addLink = document.querySelector('#addLink');
-const streamerInput = document.querySelector('#sname');
+const addLink = document.querySelector('.add-link');
+console.log(addLink);
+const streamerInput = document.querySelector('.link-name');
 // const linkInput = document.querySelector('#link');
 const streamers = document.querySelector('.streamers');
 const endPoint = 'https://api.github.com/users/andy-h1';
 const author = document.querySelector('.author');
+const deleteButton = document.querySelector('.deletebtn');
 
 const authorPromise = fetch(endPoint);
 authorPromise.then(response => {
@@ -25,8 +27,6 @@ function handleError(err) {
 
 function handleCardButtonClick(event) {
     event.preventDefault();
-
-    console.log(streamerInput.value);
     const validStreamerInput = streamerInput.value;
 
     if (validStreamerInput) {
@@ -39,14 +39,18 @@ function handleCardButtonClick(event) {
         streamers.insertAdjacentHTML("beforeend", newStreamDetails);    
     }
 
-    // const validLinkInput = linkInput.value;
+}
 
-    // if (validStreamerInput === "") {
-    //     return false;
-    // }
+function handleRemoveButtonClick (event) {
+    const button = event.currentTarget;
+    const streamer = button.closest('.streamer');
+    console.log(streamer);
+
+    streamer.remove();
 }
 
 addLink.addEventListener('click', handleCardButtonClick);
+deleteButton.addEventListener('click', handleRemoveButtonClick);
 
 //validate if input is blank
 //if input is blank return error
