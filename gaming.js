@@ -1,11 +1,10 @@
 const addLink = document.querySelector('.add-link');
 console.log(addLink);
 const streamerInput = document.querySelector('.link-name');
-// const linkInput = document.querySelector('#link');
 const streamers = document.querySelector('.streamers');
 const endPoint = 'https://api.github.com/users/andy-h1';
 const author = document.querySelector('.author');
-const deleteButton = document.querySelector('.deletebtn');
+const deleteButton = document.querySelectorAll('.deletebtn');
 
 const authorPromise = fetch(endPoint);
 authorPromise.then(response => {
@@ -44,21 +43,10 @@ function handleCardButtonClick(event) {
 function handleRemoveButtonClick (event) {
     const button = event.currentTarget;
     const streamer = button.closest('.streamer');
-    console.log(streamer);
-
     streamer.remove();
 }
 
 addLink.addEventListener('click', handleCardButtonClick);
-deleteButton.addEventListener('click', handleRemoveButtonClick);
-
-//validate if input is blank
-//if input is blank return error
-//if input is filled out return newStreamer details
-
-
-
-// create a div with class of streamer
-// create a p tag with the name (streamer.value) in the middle
-// create an a tag with the href of link.value
-// append them to the page
+deleteButton.forEach(button =>
+    button.addEventListener('click', handleRemoveButtonClick)
+  );
