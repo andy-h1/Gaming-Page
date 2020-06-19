@@ -5,6 +5,7 @@ html {
     --green: #26D646;
     --yellow: #FFF92E;
     --white: #FBFBFB;
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -32,7 +33,7 @@ h2 {
     border-radius: 50%;
     height: 300px;
     width: 300px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--box-shadow);
 }
 
 .streamer {
@@ -42,7 +43,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr 100px;
     justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--box-shadow);
 }
 
 .streamer-name {
