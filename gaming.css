@@ -23,6 +23,11 @@ body {
     background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
 }
 
+header {
+    display: flex;
+    align-items: center;
+  }
+
 h1,
 h2 {
     font-family: "Arial Black", Gadget, sans-serif;
@@ -41,7 +46,7 @@ h2 {
     padding: 50px;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
     justify-items: center;
     box-shadow: var(--box-shadow);
 }
@@ -67,7 +72,7 @@ h2 {
     align-items: center;
 }
 
-.add-link {
+.link-name, .add-link {
     color: black;
 }
 /* Add CSS Variables
