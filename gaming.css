@@ -6,25 +6,26 @@ html {
     --yellow: #FFF92E;
     --white: #FBFBFB;
     --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 * {
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
 }
 
 body {
-    display: grid;
-    margin: 0px;
+    display: block;
+    margin: 0px auto;
     padding: 0px;
     background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    max-width: 1000px;
+    padding: 1.5rem;
 }
 
 header {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 
@@ -43,12 +44,12 @@ h2 {
 
 .streamer {
     display: grid;
-    padding: 50px;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 20px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
     justify-items: center;
-    box-shadow: var(--box-shadow);
+    border-top: 1px solid var(--white);
 }
 
 .streamer-name {
@@ -70,6 +71,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid var(--white);
 }
 
 .link-name, .add-link {
