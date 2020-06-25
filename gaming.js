@@ -35,6 +35,7 @@ function handleCardButtonClick(event) {
         <a href="https://twitch.tv/${validStreamerInput}" target="_blank">Twitch</a>
     </div>
         `;
+
         streamers.insertAdjacentHTML("beforeend", newStreamDetails);    
     }
 
@@ -50,3 +51,4 @@ addLink.addEventListener('click', handleCardButtonClick);
 deleteButton.forEach(button =>
     button.addEventListener('click', handleRemoveButtonClick)
   );
+
