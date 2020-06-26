@@ -28,9 +28,15 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
   }
+
+/* .home-page {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}   */
 
 .btn {
     border: 2px solid black;
