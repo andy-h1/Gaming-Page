@@ -93,6 +93,21 @@ header {
 .link-name, .add-link {
     color: black;
 }
+
+.game-img {
+    width: 400px;
+    object-fit: scale-down;
+}
+
+.games {
+    display: grid;
+    padding: 20px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+    justify-items: center;
+    border-top: 1px solid black;;
+}
 /* Add CSS Variables
 Sort out Specificity
 Add CSS Grid to streamer container */
